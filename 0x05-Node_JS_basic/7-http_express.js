@@ -10,7 +10,6 @@ app.get('/', (req, res) => {
   res.send('Hello Holberton School!');
 });
 
-
 app.get('/students', async (req, res) => {
   res.setHeader('Content-Type', 'text/plain');
 
@@ -29,3 +28,5 @@ app.get('/students', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
+
+module.exports = app;

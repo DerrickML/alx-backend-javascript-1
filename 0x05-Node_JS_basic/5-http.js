@@ -2,15 +2,13 @@ const http = require('http');
 
 const getStudentData = require('./3-read_file_async');
 
-
 const PORT = 1245;
 const HOST_NAME = '127.0.0.1';
 
 const app = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  
-  if (req.url == '/') {
+  if (req.url === '/') {
     res.end('Hello Holberton School!');
   }
   if (req.url === '/students') {
